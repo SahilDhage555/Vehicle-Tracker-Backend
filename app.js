@@ -3,7 +3,7 @@ const fs = require("fs"); // For reading data from the filesystem
 const app = express();
 const cors = require("cors"); // To allow cross-origin requests
 
-app.use(cors()); // Enable CORS for all routes
+app.use(cors({ origin: "https://Vehicle-Tracker-Frontend.github.io" })); // Enable CORS for all routes
 
 // Route to get the vehicle location data
 app.get("/api/vehicle", (req, res) => {
